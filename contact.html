@@ -348,6 +348,50 @@
     <script>
         lucide.createIcons();
     </script>
+
+    <!-- jQuery (dibutuhkan untuk AJAX EmailJS) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Script integrasi EmailJS -->
+    <script>
+    $('#contact-form').on('submit', function(event) {
+        event.preventDefault(); // Cegah reload halaman
+
+        // tampilkan animasi loading
+        $('#loading').removeClass('hidden');
+        $('#success-message').addClass('hidden');
+        $('#error-message').addClass('hidden');
+
+        var formData = new FormData(this);
+        formData.append('service_id', 'service_jyvpaqq');    // ganti dengan Service ID kamu
+        formData.append('template_id', 'template_j6t04zf');  // ganti dengan Template ID kamu
+        formData.append('user_id', 'siX64esvooVWMP4Mm');       // ganti dengan Public Key kamu
+        formData.append('time', new Date().toLocaleString());
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false
+        }).done(function() {
+            $('#loading').addClass('hidden');
+            $('#success-message').removeClass('hidden');
+            $('#contact-form')[0].reset();
+            feather.replace(); // refresh ikon feather
+        }).fail(function(error) {
+            $('#loading').addClass('hidden');
+            $('#error-message').removeClass('hidden');
+            console.error('EmailJS Error:', error);
+            feather.replace();
+        });
+    });
+
+    // Sembunyikan notifikasi manual (tombol "X")
+    function hideNotification(id) {
+        $('#' + id).addClass('hidden');
+    }
+    </script>
+
     
 
 </body>
