@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Indoditi Studios</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FDFDFE',
+                        secondary: '#E33C36',
+                        dark: '#161F29'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            background-color: #161F29;
+            color: #FDFDFE;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #161F29 0%, #1E293B 100%);
+        }
+        .btn-primary {
+            background-color: #E33C36;
+            color: #FDFDFE;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 60, 54, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="py-6 px-4 md:px-12 lg:px-24 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <!-- <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+                <i data-feather="code" class="text-primary"></i>
+            </div> -->
+            <img src="assets\icon\logo.png" alt="Indoditi Logo" class="h-7">
+            <span class="text-xl font-bold text-primary">Indoditi</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+            <a href="services.html" class="text-secondary hover:text-secondary transition">Services</a>
+            <a href="work.html" class="text-primary hover:text-secondary transition">Work</a>
+            <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+            <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+        </div>
+        <button class="md:hidden text-primary" id="mobile-menu-button">
+            <i data-feather="menu"></i>
+        </button>
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 z-50 bg-dark py-6 px-6 border-t border-gray-800">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+                <a href="services.html" class="text-secondary hover:text-secondary transition">Services</a>
+                <a href="work.html" class="text-primary hover:text-secondary transition">Work</a>
+                <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+                <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero -->
+    <section class="hero-gradient py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
+                Our <span class="text-secondary">Services</span>
+            </h1>
+            <p class="text-lg mb-8 text-primary opacity-90 max-w-3xl mx-auto">
+                Comprehensive solutions tailored to your business needs and growth objectives.
+            </p>
+        </div>
+    </section>
+<!-- Detailed Services -->
+<section class="py-20 px-4 md:px-12 lg:px-24">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+    
+    <!-- Web Development -->
+    <div class="bg-dark p-8 rounded-xl border border-gray-800 hover:border-secondary transition group flex flex-col h-full">
+      <div class="flex flex-col items-start md:flex-row md:items-center mb-6">
+        <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mb-4 md:mb-0 md:mr-6 group-hover:bg-secondary group-hover:bg-opacity-30 transition">
+          <i data-feather="globe" class="text-secondary group-hover:text-primary transition"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-primary">Web Development</h3>
+      </div>
+      <p class="text-primary opacity-80 mb-6 flex-grow">
+        We create responsive, high-performance websites and web applications using modern technologies like React, Next, and Golang.
+      </p>
+      <ul class="space-y-2 text-primary opacity-80 mb-8">
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Company Profile</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> E-commerce Solutions</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> API Integration</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Progressive Web Apps</li>
+      </ul>
+      <div class="mt-auto pt-6">
+        <div class="flex space-x-4">
+          
+          <a href="web-development.html" class="px-6 py-3 rounded-lg font-medium border border-gray-700 text-primary hover:border-secondary hover:text-secondary transition flex-1 text-center">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Development -->
+    <div class="bg-dark p-8 rounded-xl border border-gray-800 hover:border-secondary transition group flex flex-col h-full">
+      <div class="flex flex-col items-start md:flex-row md:items-center mb-6">
+        <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mb-4 md:mb-0 md:mr-6 group-hover:bg-secondary group-hover:bg-opacity-30 transition">
+          <i data-feather="smartphone" class="text-secondary group-hover:text-primary transition"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-primary">Mobile Development</h3>
+      </div>
+      <p class="text-primary opacity-80 mb-6 flex-grow">
+        We build cross-platform mobile applications that deliver seamless user experiences across iOS and Android devices.
+      </p>
+      <ul class="space-y-2 text-primary opacity-80 mb-8">
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Flutter Applications</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> API Integration</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Mobile UI/UX Design</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> App Store Deployment</li>
+      </ul>
+      <div class="mt-auto pt-6">
+        <div class="flex space-x-4">
+          
+          <a href="mobile-development.html" class="px-6 py-3 rounded-lg font-medium border border-gray-700 text-primary hover:border-secondary hover:text-secondary transition flex-1 text-center">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- IoT Solutions -->
+    <div class="bg-dark p-8 rounded-xl border border-gray-800 hover:border-secondary transition group flex flex-col h-full">
+      <div class="flex flex-col items-start md:flex-row md:items-center mb-6">
+        <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mb-4 md:mb-0 md:mr-6 group-hover:bg-secondary group-hover:bg-opacity-30 transition">
+          <i data-feather="cpu" class="text-secondary group-hover:text-primary transition"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-primary">IoT Solutions</h3>
+      </div>
+      <p class="text-primary opacity-80 mb-6 flex-grow">
+        We build smart IoT ecosystems that connect devices, sensors, and data to improve efficiency, optimize operations, and deliver real-time insights.
+      </p>
+      <ul class="space-y-2 text-primary opacity-80 mb-8">
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Smart Device Integration</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Real-time Data Monitoring</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Predictive Maintenance</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Edge & Cloud Connectivity</li>
+      </ul>
+      <div class="mt-auto pt-6">
+        <div class="flex space-x-4">
+          
+          <a href="iot-solutions.html" class="px-6 py-3 rounded-lg font-medium border border-gray-700 text-primary hover:border-secondary hover:text-secondary transition flex-1 text-center">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- UI/UX Design -->
+    <div class="bg-dark p-8 rounded-xl border border-gray-800 hover:border-secondary transition group flex flex-col h-full">
+      <div class="flex flex-col items-start md:flex-row md:items-center mb-6">
+        <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mb-4 md:mb-0 md:mr-6 group-hover:bg-secondary group-hover:bg-opacity-30 transition">
+          <i data-feather="layers" class="text-secondary group-hover:text-primary transition"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-primary">UI/UX Design</h3>
+      </div>
+      <p class="text-primary opacity-80 mb-6 flex-grow">
+        We craft intuitive and visually stunning user interfaces that enhance engagement and drive conversions.
+      </p>
+      <ul class="space-y-2 text-primary opacity-80 mb-8">
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> User Research</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Wireframing & Prototyping</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Interaction Design</li>
+        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Design Systems</li>
+      </ul>
+      <div class="mt-auto pt-6">
+        <div class="flex space-x-4">
+          
+          <a href="uiux-design.html" class="px-6 py-3 rounded-lg font-medium border border-gray-700 text-primary hover:border-secondary hover:text-secondary transition flex-1 text-center">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 md:px-12 lg:px-24 bg-secondary">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Ready to discuss your project?</h2>
+            <p class="text-lg mb-8 text-primary opacity-90">
+                Let's explore how we can help you achieve your business goals with our services.
+            </p>
+            <a href="contact.html" class="inline-block bg-primary text-dark px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+<!-- Footer -->
+    <footer class="bg-dark py-16 px-4 md:px-12 lg:px-24 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <!-- <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center">
+                        <i data-feather="code" class="text-primary text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-primary">Indoditi</span> -->
+                    <img src="assets/icon/logo.png" alt="Indoditi Logo" class="h-11 w-auto">
+                    <span class="text-2xl font-bold text-primary">Indoditi</span>
+                </div>
+                <p class="text-primary opacity-80 mb-6">
+                    Transforming ideas into exceptional digital experiences.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.tiktok.com/@indoditi.ltd" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <!-- TikTok SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" class="w-5 h-5">
+                            <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.5A162.5,162.5,0,1,1,185,188.1V278.2a74.5,74.5,0,1,0,52.2,71.3V0h88a121.5,121.5,0,0,0,1.9,22.1A122.2,122.2,0,0,0,379.4,109,121.5,121.5,0,0,0,448,123.5Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/indoditi" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/Indoditi-Ltd/61578709363206/" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Services</h4>
+                <ul class="space-y-3">
+                    <li><a href="web-development.html" class="text-primary opacity-80 hover:text-secondary transition">Web Development</a></li>
+                    <li><a href="mobile-development.html" class="text-primary opacity-80 hover:text-secondary transition">Mobile Apps</a></li>
+                    <li><a href="uiux-design.html" class="text-primary opacity-80 hover:text-secondary transition">UI/UX Design</a></li>
+                    <li><a href="iot-solutions.html" class="text-primary opacity-80 hover:text-secondary transition">IoT Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Company</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-primary opacity-80 hover:text-secondary transition">About Us</a></li>
+                    <li><a href="work.html" class="text-primary opacity-80 hover:text-secondary transition">Our Work</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <i data-feather="mail" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">dev.indoditi@gmail.com</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="phone" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">+62 (857) 9164-3208</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="map-pin" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">Tanggul, Jember</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+            <p id="current-year" class="text-primary opacity-60 mb-4 md:mb-0">© 2023 Indoditi Studios. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Privacy Policy</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Terms of Service</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+         document.getElementById('current-year').textContent = 
+        `© ${new Date().getFullYear()} Indoditi Studios. All rights reserved.`;
+    </script>
+</body>
+</html>

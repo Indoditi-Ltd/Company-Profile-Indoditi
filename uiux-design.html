@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Design - Indoditi Studios</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FDFDFE',
+                        secondary: '#E33C36',
+                        dark: '#161F29'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            background-color: #161F29;
+            color: #FDFDFE;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #161F29 0%, #1E293B 100%);
+        }
+        .btn-primary {
+            background-color: #E33C36;
+            color: #FDFDFE;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 60, 54, 0.3);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .project-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="py-6 px-4 md:px-12 lg:px-24 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <img src="assets\icon\logo.png" alt="Indoditi Logo" class="h-7">
+            <span class="text-xl font-bold text-primary">Indoditi</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+            <a href="services.html" class="text-secondary hover:text-secondary transition">Services</a>
+            <a href="work.html" class="text-primary hover:text-secondary transition">Work</a>
+            <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+            <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+        </div>
+        <button class="md:hidden text-primary" id="mobile-menu-button">
+            <i data-feather="menu"></i>
+        </button>
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 z-50 bg-dark py-6 px-6 border-t border-gray-800">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+                <a href="services.html" class="text-secondary hover:text-secondary transition">Services</a>
+                <a href="work.html" class="text-primary hover:text-secondary transition">Work</a>
+                <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+                <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
+                    UI/UX <span class="text-secondary">Design</span>
+                </h1>
+                <p class="text-lg mb-8 text-primary opacity-90">
+                    We craft intuitive and visually stunning user interfaces that enhance engagement, drive conversions, and create memorable digital experiences for your users.
+                </p>
+                <a href="contact.html" class="inline-block bg-secondary text-primary px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition">
+                    Consult Your Project
+                </a>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-secondary opacity-20"></div>
+                <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-secondary opacity-20"></div>
+                <img src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                     alt="UI/UX Design" class="relative z-10 rounded-xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Design Services -->
+    <section class="py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Our UI/UX Design Services</h2>
+            <p class="text-lg text-center mb-12 text-primary opacity-80 max-w-3xl mx-auto">
+                From user research to pixel-perfect interfaces, we create designs that not only look beautiful but also solve real user problems and drive business growth.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="users" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">User Research & Strategy</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Deep dive into user behaviors, needs, and pain points to create data-driven design strategies that align with business goals.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> User Interviews & Surveys</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Persona Development</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Competitive Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="layout" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Wireframing & Prototyping</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Create interactive prototypes and wireframes to test user flows, validate concepts, and refine the user experience before development.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Low & High-Fidelity Wireframes</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Interactive Prototypes</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> User Flow Mapping</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="pen-tool" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Visual Interface Design</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Transform wireframes into stunning, pixel-perfect interfaces with attention to typography, color, spacing, and visual hierarchy.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Visual Design Systems</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Icon & Illustration Design</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Responsive Design</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="award" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Design Systems</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Create comprehensive design systems that ensure consistency, scalability, and efficiency across all your digital products.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Component Libraries</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Design Tokens</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Documentation & Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Design Process -->
+    <section class="py-20 px-4 md:px-12 lg:px-24 bg-dark bg-opacity-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Our UI/UX Design Process</h2>
+            <p class="text-lg text-center mb-12 text-primary opacity-80 max-w-3xl mx-auto">
+                We follow a user-centered design approach that ensures every design decision is backed by research and validation.
+            </p>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Discover & Research</h3>
+                    <p class="text-primary opacity-80">Understand user needs, business goals, and market context through comprehensive research.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Define & Strategize</h3>
+                    <p class="text-primary opacity-80">Synthesize research findings and define design strategy, user personas, and key requirements.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Design & Prototype</h3>
+                    <p class="text-primary opacity-80">Create wireframes, prototypes, and visual designs based on research insights and user feedback.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Test & Iterate</h3>
+                    <p class="text-primary opacity-80">Validate designs through user testing and iterate based on feedback to ensure optimal user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Design Showcase -->
+    <section class="py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Our UI/UX Design Projects</h2>
+            <p class="text-lg text-center mb-12 text-primary opacity-80 max-w-3xl mx-auto">
+                Here are some examples of UI/UX design projects we've delivered for our clients across various industries.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-dark rounded-xl overflow-hidden border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1164&q=80" 
+                         alt="Website Redesign" class="project-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">E-commerce Website Redesign</h3>
+                        <p class="text-primary opacity-80 mb-4">Complete UI/UX redesign that improved conversion rates by 45% through better user experience.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Figma</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">User Research</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-dark rounded-xl overflow-hidden border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Mobile App Design" class="project-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Banking Mobile App</h3>
+                        <p class="text-primary opacity-80 mb-4">Intuitive mobile banking interface with enhanced security features and seamless user flows.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Sketch</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">User Testing</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Design System</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-dark rounded-xl overflow-hidden border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" 
+                         alt="Dashboard Design" class="project-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Analytics Dashboard</h3>
+                        <p class="text-primary opacity-80 mb-4">Complex data visualization dashboard that makes complex information easily understandable.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Adobe XD</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Data Visualization</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Component Library</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 md:px-12 lg:px-24 bg-secondary">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Ready to Create Exceptional User Experiences?</h2>
+            <p class="text-lg mb-8 text-primary opacity-90">
+                Let's discuss how great UI/UX design can transform your digital product and delight your users.
+            </p>
+            <a href="contact.html" class="inline-block bg-primary text-dark px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-16 px-4 md:px-12 lg:px-24 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="assets/icon/logo.png" alt="Indoditi Logo" class="h-11 w-auto">
+                    <span class="text-2xl font-bold text-primary">Indoditi</span>
+                </div>
+                <p class="text-primary opacity-80 mb-6">
+                    Transforming ideas into exceptional digital experiences.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.tiktok.com/@indoditi.ltd" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" class="w-5 h-5">
+                            <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.5A162.5,162.5,0,1,1,185,188.1V278.2a74.5,74.5,0,1,0,52.2,71.3V0h88a121.5,121.5,0,0,0,1.9,22.1A122.2,122.2,0,0,0,379.4,109,121.5,121.5,0,0,0,448,123.5Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/indoditi" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Indoditi-Ltd" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="github"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Services</h4>
+                <ul class="space-y-3">
+                    <li><a href="web-development.html" class="text-primary opacity-80 hover:text-secondary transition">Web Development</a></li>
+                    <li><a href="mobile-development.html" class="text-primary opacity-80 hover:text-secondary transition">Mobile Apps</a></li>
+                    <li><a href="uiux-design.html" class="text-primary opacity-80 hover:text-secondary transition">UI/UX Design</a></li>
+                    <li><a href="iot-solutions.html" class="text-primary opacity-80 hover:text-secondary transition">IoT Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Company</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-primary opacity-80 hover:text-secondary transition">About Us</a></li>
+                    <li><a href="work.html" class="text-primary opacity-80 hover:text-secondary transition">Our Work</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <i data-feather="mail" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">dev.indoditi@gmail.com</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="phone" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">+62 (857) 9164-3208</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="map-pin" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">Tanggul, Jember</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+            <p id="current-year" class="text-primary opacity-60 mb-4 md:mb-0">© 2023 Indoditi Studios. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Privacy Policy</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Terms of Service</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Update copyright year
+        document.getElementById('current-year').textContent = 
+            `© ${new Date().getFullYear()} Indoditi Studios. All rights reserved.`;
+    </script>
+</body>
+</html>

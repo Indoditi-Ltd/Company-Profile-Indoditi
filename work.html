@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Indoditi Studios</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FDFDFE',
+                        secondary: '#E33C36',
+                        dark: '#161F29'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            background-color: #161F29;
+            color: #FDFDFE;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #161F29 0%, #1E293B 100%);
+        }
+        .btn-primary {
+            background-color: #E33C36;
+            color: #FDFDFE;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 60, 54, 0.3);
+        }
+        .work-item {
+            transition: all 0.3s ease;
+        }
+        .work-item:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+   <!-- Navigation -->
+    <nav class="py-6 px-4 md:px-12 lg:px-24 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <!-- <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+                <i data-feather="code" class="text-primary"></i>
+            </div> -->
+            <img src="assets\icon\logo.png" alt="Indoditi Logo" class="h-7">
+            <span class="text-xl font-bold text-primary">Indoditi</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+            <a href="services.html" class="text-primary hover:text-secondary transition">Services</a>
+            <a href="work.html" class="text-secondary hover:text-secondary transition">Work</a>
+            <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+            <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+        </div>
+        <button class="md:hidden text-primary" id="mobile-menu-button">
+            <i data-feather="menu"></i>
+        </button>
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 z-50 bg-dark py-6 px-6 border-t border-gray-800">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+                <a href="services.html" class="text-primary hover:text-secondary transition">Services</a>
+                <a href="work.html" class="text-secondary hover:text-secondary transition">Work</a>
+                <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+                <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Work Hero -->
+    <section class="hero-gradient py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
+                Our <span class="text-secondary">Work</span>
+            </h1>
+            <p class="text-lg mb-8 text-primary opacity-90 max-w-3xl mx-auto">
+                Explore our portfolio of innovative digital solutions that have transformed businesses.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="py-10 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-6 py-2 rounded-full bg-secondary text-primary font-medium">All</button>
+                <button class="px-6 py-2 rounded-full bg-dark text-primary border border-gray-800 hover:border-secondary transition">Web</button>
+                <button class="px-6 py-2 rounded-full bg-dark text-primary border border-gray-800 hover:border-secondary transition">Mobile</button>
+                <button class="px-6 py-2 rounded-full bg-dark text-primary border border-gray-800 hover:border-secondary transition">Design</button>
+                <button class="px-6 py-2 rounded-full bg-dark text-primary border border-gray-800 hover:border-secondary transition">Cloud</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<main>
+    <!-- Portfolio Grid -->
+    <section class="py-10 px-4 md:px-12 lg:px-24 pb-20">
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="work-item bg-dark p-6 rounded-xl border border-gray-800 hover:border-secondary transition">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/technology/640x360/1" alt="E-commerce Platform" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary">Nexus Commerce</h3>
+                <p class="text-primary opacity-80 mb-4">A high-performance e-commerce platform with custom CMS and payment integration.</p>
+                <a href="#" class="text-secondary hover:underline">View Project →</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="work-item bg-dark p-6 rounded-xl border border-gray-800 hover:border-secondary transition">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/technology/640x360/2" alt="Mobile App" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary">TravelMate App</h3>
+                <p class="text-primary opacity-80 mb-4">A travel companion app with itinerary planning and real-time updates.</p>
+                <a href="#" class="text-secondary hover:underline">View Project →</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="work-item bg-dark p-6 rounded-xl border border-gray-800 hover:border-secondary transition">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/technology/640x360/3" alt="Dashboard" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary">Analytics Dashboard</h3>
+                <p class="text-primary opacity-80 mb-4">Business intelligence dashboard with real-time data visualization.</p>
+                <a href="#" class="text-secondary hover:underline">View Project →</a>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="work-item bg-dark p-6 rounded-xl border border-gray-800 hover:border-secondary transition">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/technology/640x360/4" alt="Health App" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary">HealthTrack Pro</h3>
+                <p class="text-primary opacity-80 mb-4">Comprehensive health monitoring app with AI-powered insights.</p>
+                <a href="#" class="text-secondary hover:underline">View Project →</a>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="work-item bg-dark p-6 rounded-xl border border-gray-800 hover:border-secondary transition">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/technology/640x360/5" alt="E-learning" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary">EduLearn Platform</h3>
+                <p class="text-primary opacity-80 mb-4">Interactive e-learning platform with personalized courses.</p>
+                <a href="#" class="text-secondary hover:underline">View Project →</a>
+            </div>
+            <!-- Project 6 -->
+            <div class="work-item bg-dark p-6 rounded-xl border border-gray-800 hover:border-secondary transition">
+                <div class="mb-4 overflow-hidden rounded-lg">
+                    <img src="http://static.photos/technology/640x360/6" alt="Finance App" class="w-full h-48 object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-primary">FinWise</h3>
+                <p class="text-primary opacity-80 mb-4">Personal finance management tool with budgeting features.</p>
+                <a href="#" class="text-secondary hover:underline">View Project →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-16 px-4 md:px-12 lg:px-24 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <!-- <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center">
+                        <i data-feather="code" class="text-primary text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-primary">Indoditi</span> -->
+                    <img src="assets/icon/logo.png" alt="Indoditi Logo" class="h-11 w-auto">
+                    <span class="text-2xl font-bold text-primary">Indoditi</span>
+                </div>
+                <p class="text-primary opacity-80 mb-6">
+                    Transforming ideas into exceptional digital experiences.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.tiktok.com/@indoditi.ltd" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <!-- TikTok SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" class="w-5 h-5">
+                            <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.5A162.5,162.5,0,1,1,185,188.1V278.2a74.5,74.5,0,1,0,52.2,71.3V0h88a121.5,121.5,0,0,0,1.9,22.1A122.2,122.2,0,0,0,379.4,109,121.5,121.5,0,0,0,448,123.5Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/indoditi" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/Indoditi-Ltd/61578709363206/" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Services</h4>
+                <ul class="space-y-3">
+                    <li><a href="web-development.html" class="text-primary opacity-80 hover:text-secondary transition">Web Development</a></li>
+                    <li><a href="mobile-development.html" class="text-primary opacity-80 hover:text-secondary transition">Mobile Apps</a></li>
+                    <li><a href="uiux-design.html" class="text-primary opacity-80 hover:text-secondary transition">UI/UX Design</a></li>
+                    <li><a href="iot-solutions.html" class="text-primary opacity-80 hover:text-secondary transition">IoT Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Company</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-primary opacity-80 hover:text-secondary transition">About Us</a></li>
+                    <li><a href="work.html" class="text-primary opacity-80 hover:text-secondary transition">Our Work</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <i data-feather="mail" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">dev.indoditi@gmail.com</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="phone" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">+62 (857) 9164-3208</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="map-pin" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">Tanggul, Jember</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+            <p id="current-year" class="text-primary opacity-60 mb-4 md:mb-0">© 2023 Indoditi Studios. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Privacy Policy</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Terms of Service</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+         document.getElementById('current-year').textContent = 
+        `© ${new Date().getFullYear()} Indoditi Studios. All rights reserved.`;
+    </script>
+</body>
+
+</html>

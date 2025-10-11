@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - Indoditi Studios</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FDFDFE',
+                        secondary: '#E33C36',
+                        dark: '#161F29'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        body {
+            background-color: #161F29;
+            color: #FDFDFE;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #161F29 0%, #1E293B 100%);
+        }
+        .btn-primary {
+            background-color: #E33C36;
+            color: #FDFDFE;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 60, 54, 0.3);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        .project-image {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="py-6 px-4 md:px-12 lg:px-24 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <!-- <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center">
+                <i data-feather="code" class="text-primary"></i>
+            </div> -->
+            <img src="assets\icon\logo.png" alt="Indoditi Logo" class="h-7">
+            <span class="text-xl font-bold text-primary">Indoditi</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+            <a href="services.html" class="text-secondary hover:text-secondary transition">Services</a>
+            <a href="work.html" class="text-primary hover:text-secondary transition">Work</a>
+            <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+            <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+        </div>
+        <button class="md:hidden text-primary" id="mobile-menu-button">
+            <i data-feather="menu"></i>
+        </button>
+        <div id="mobile-menu" class="hidden absolute top-20 left-0 right-0 z-50 bg-dark py-6 px-6 border-t border-gray-800">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-primary hover:text-secondary transition">Home</a>
+                <a href="services.html" class="text-secondary hover:text-secondary transition">Services</a>
+                <a href="work.html" class="text-primary hover:text-secondary transition">Work</a>
+                <a href="about.html" class="text-primary hover:text-secondary transition">About</a>
+                <a href="contact.html" class="text-primary hover:text-secondary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+               <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
+                        Web <span class="text-secondary">Development</span>
+                    </h1>
+                    <p class="text-lg mb-8 text-primary opacity-90">
+                        We develop responsive, high-performance websites and web applications tailored to your business needs using modern technologies like React, Next.js, and Golang.
+                    </p>
+                    <a href="contact.html" class="inline-block bg-secondary text-primary px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition">
+                        Consult Your Project
+                    </a>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-secondary opacity-20"></div>
+                <div class="absolute -bottom-10 -right-10 w-32 h-32 rounded-full bg-secondary opacity-20"></div>
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Web Development" class="relative z-10 rounded-xl shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development Services -->
+    <section class="py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Our Web Development Services</h2>
+            <p class="text-lg text-center mb-12 text-primary opacity-80 max-w-3xl mx-auto">
+                From corporate profile websites to complex web applications, we deliver solutions that meet your specific business requirements.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="briefcase" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Corporate Profile Websites</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Professional websites that effectively showcase your brand, services, and company values to potential clients.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Responsive design</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> SEO optimization</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Content management system</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="shopping-cart" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">E-commerce Solutions</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Custom online stores with secure payment integration, inventory management, and customer analytics.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Payment gateway integration</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Product management</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Order tracking system</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="layout" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">Web Applications</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Interactive applications that solve specific business problems and improve operational efficiency.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Custom functionality</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> User authentication</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Database integration</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card bg-dark p-8 rounded-xl border border-gray-800">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mr-4">
+                            <i data-feather="code" class="text-secondary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary">API Integration</h3>
+                    </div>
+                    <p class="text-primary opacity-80 mb-4">
+                        Seamless integration with third-party services to extend functionality and improve user experience.
+                    </p>
+                    <ul class="text-primary opacity-80 space-y-2">
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> RESTful API development</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Third-party service integration</li>
+                        <li class="flex items-center"><i data-feather="check" class="text-secondary mr-2"></i> Webhook implementation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development Process -->
+    <section class="py-20 px-4 md:px-12 lg:px-24 bg-dark bg-opacity-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Our Web Development Process</h2>
+            <p class="text-lg text-center mb-12 text-primary opacity-80 max-w-3xl mx-auto">
+                We follow a structured approach to ensure your web project is delivered on time and exceeds expectations.
+            </p>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Discovery & Planning</h3>
+                    <p class="text-primary opacity-80">We analyze your requirements and create a detailed project plan.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Design & Prototyping</h3>
+                    <p class="text-primary opacity-80">We create wireframes and prototypes for your approval.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Development</h3>
+                    <p class="text-primary opacity-80">Our team builds your website using modern technologies.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-secondary bg-opacity-20 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-secondary">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-2">Testing & Launch</h3>
+                    <p class="text-primary opacity-80">We thoroughly test and deploy your website to production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Development Showcase -->
+    <section class="py-20 px-4 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-primary">Our Web Development Projects</h2>
+            <p class="text-lg text-center mb-12 text-primary opacity-80 max-w-3xl mx-auto">
+                Here are some examples of websites we've developed for our clients.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-dark rounded-xl overflow-hidden border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                         alt="E-commerce Platform" class="project-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">E-commerce Platform</h3>
+                        <p class="text-primary opacity-80 mb-4">Complete online store with inventory management and payment integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">React</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-dark rounded-xl overflow-hidden border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" 
+                         alt="Corporate Website" class="project-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Corporate Website</h3>
+                        <p class="text-primary opacity-80 mb-4">Company profile website with modern and responsive design.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Next.js</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Tailwind CSS</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Contentful</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-dark rounded-xl overflow-hidden border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                         alt="Management Application" class="project-image">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-primary mb-2">Management Application</h3>
+                        <p class="text-primary opacity-80 mb-4">Web application for managing business operations and analytics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Vue.js</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">Golang</span>
+                            <span class="px-2 py-1 bg-dark border border-gray-700 text-primary rounded text-xs">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 md:px-12 lg:px-24 bg-secondary">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Ready to Build Your Website?</h2>
+            <p class="text-lg mb-8 text-primary opacity-90">
+                Let's discuss your web development project and create a solution that drives your business forward.
+            </p>
+            <a href="contact.html" class="inline-block bg-primary text-dark px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
+                Contact Us
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-16 px-4 md:px-12 lg:px-24 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <!-- <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center">
+                        <i data-feather="code" class="text-primary text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-primary">Indoditi</span> -->
+                    <img src="assets/icon/logo.png" alt="Indoditi Logo" class="h-11 w-auto">
+                    <span class="text-2xl font-bold text-primary">Indoditi</span>
+                </div>
+                <p class="text-primary opacity-80 mb-6">
+                    Transforming ideas into exceptional digital experiences.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.tiktok.com/@indoditi.ltd" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <!-- TikTok SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 448 512" class="w-5 h-5">
+                            <path d="M448,209.9a210.1,210.1,0,0,1-122.8-39.3V349.5A162.5,162.5,0,1,1,185,188.1V278.2a74.5,74.5,0,1,0,52.2,71.3V0h88a121.5,121.5,0,0,0,1.9,22.1A122.2,122.2,0,0,0,379.4,109,121.5,121.5,0,0,0,448,123.5Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/indoditi" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/Indoditi-Ltd/61578709363206/" class="w-10 h-10 rounded-full bg-dark border border-gray-700 flex items-center justify-center text-primary hover:bg-secondary hover:text-primary transition">
+                        <i data-feather="facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Services</h4>
+                <ul class="space-y-3">
+                    <li><a href="web-development.html" class="text-primary opacity-80 hover:text-secondary transition">Web Development</a></li>
+                    <li><a href="mobile-development.html" class="text-primary opacity-80 hover:text-secondary transition">Mobile Apps</a></li>
+                    <li><a href="uiux-design.html" class="text-primary opacity-80 hover:text-secondary transition">UI/UX Design</a></li>
+                    <li><a href="iot-solutions.html" class="text-primary opacity-80 hover:text-secondary transition">IoT Solutions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Company</h4>
+                <ul class="space-y-3">
+                    <li><a href="about.html" class="text-primary opacity-80 hover:text-secondary transition">About Us</a></li>
+                    <li><a href="work.html" class="text-primary opacity-80 hover:text-secondary transition">Our Work</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-primary">Contact</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <i data-feather="mail" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">dev.indoditi@gmail.com</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="phone" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">+62 (857) 9164-3208</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="map-pin" class="text-secondary mr-3"></i>
+                        <span class="text-primary opacity-80">Tanggul, Jember</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+            <p id="current-year" class="text-primary opacity-60 mb-4 md:mb-0">© 2023 Indoditi Studios. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Privacy Policy</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Terms of Service</a>
+                <a href="#" class="text-primary opacity-60 hover:text-secondary transition">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Update copyright year
+        document.getElementById('current-year').textContent = 
+            `© ${new Date().getFullYear()} Indoditi Studios. All rights reserved.`;
+    </script>
+</body>
+</html>
